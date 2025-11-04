@@ -45,7 +45,7 @@ Please contact one of the IBM GH Org stewards if needed.**
 
 ## Contributing
 
-If you have any questions or issues you can create a new [issue here](https://github.com/stevei101/ibm-template-project/issues/new).
+If you have any questions or issues you can create a new [issue here](https://github.com/{GITHUB_ORG}/{GITHUB_REPO}/issues/new).
 
 Pull requests are very welcome! Make sure your patches are well tested.
 Ideally create a topic branch for every separate change you make. For

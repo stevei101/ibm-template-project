@@ -12,4 +12,4 @@ currently being supported with security updates.
 
 ## Reporting a Vulnerability
 
-To report a security issue, please open an issue in the repository or contact the project maintainers directly. Our team will acknowledge receiving your report within 3 working days. This project follows a 90 day disclosure timeline.
+To report a security issue, please contact the project maintainers directly via email (see MAINTAINERS.md). Do not open a public issue for security vulnerabilities. Our team will acknowledge receiving your report within 3 working days. This project follows a 90 day disclosure timeline.
