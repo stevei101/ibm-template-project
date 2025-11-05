@@ -75,4 +75,4 @@ If you would like to see the detailed LICENSE click [here](LICENSE).
 
 ## Authors
 
-- Maintainer Name <maintainer@example.com>
+- Jane Doe <jane.doe@ibm.com>
