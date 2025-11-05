@@ -15,5 +15,5 @@ All notable changes to this project will be documented in this file.
 - Added SECURITY.md
 - Added CHANGELOG.md
 
-[unreleased]: https://github.com/{GITHUB_ORG}/{GITHUB_REPO}/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/{GITHUB_ORG}/{GITHUB_REPO}/releases/tag/v0.0.1
+[unreleased]: https://github.com/ibm/template-project/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/ibm/template-project/releases/tag/v0.0.1
