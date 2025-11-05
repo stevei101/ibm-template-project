@@ -1,3 +1,3 @@
 # MAINTAINERS
 
-Maintainer Name - maintainer@example.com
+Alice Smith - alice.smith@openproject.org
