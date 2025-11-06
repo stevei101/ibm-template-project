@@ -50,6 +50,7 @@ This template includes pre-configured GitHub Actions workflows that integrate wi
 
 - **Infrastructure Repository** (`stevei101/infrastructure`) - Terraform and infrastructure management
 - **Podman/Kustomize Repository** (`stevei101/podman-kustomize-k8s-deploy-gha`) - Container builds and K8s deployments
+- **Cursor-Agent PR Review** (`stevei101/cursor-agent-pr-review`) - Automated AI code reviews
 
 ## 🔗 Repository Ecosystem
 
@@ -60,11 +61,13 @@ This template is part of the `stevei101` organization's modular infrastructure:
 | **ibm-template-project** | Project template | Start here for new projects |
 | **infrastructure** | Terraform & IaC | Infrastructure as Code workflows |
 | **podman-kustomize-k8s-deploy-gha** | Containers & K8s | Container builds and deployments |
+| **cursor-agent-pr-review** | AI Code Reviews | Automated PR code reviews |
 
 ### Learn More
 
 - [Infrastructure Repository](https://github.com/stevei101/infrastructure)
 - [Podman/Kustomize Repository](https://github.com/stevei101/podman-kustomize-k8s-deploy-gha)
+- [Cursor-Agent PR Review](https://github.com/stevei101/cursor-agent-pr-review)
 - [Repository Ecosystem Guide](https://github.com/stevei101/infrastructure/blob/main/docs/REPOSITORY_ECOSYSTEM.md)
 
 ## 🏗️ Infrastructure Setup
@@ -194,6 +197,7 @@ Configure these secrets in your GitHub repository settings:
 - [Infrastructure Setup Guide](docs/INFRASTRUCTURE_SETUP.md)
 - [Container Build Guide](docs/CONTAINER_BUILD.md)
 - [Kubernetes Deployment Guide](docs/K8S_DEPLOYMENT.md)
+- [AI Code Review Guide](docs/AI_CODE_REVIEW.md)
 - [Repository Ecosystem](docs/ECOSYSTEM.md)
 
 ## 🛠️ Customization
