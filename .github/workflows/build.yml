@@ -1,0 +1,33 @@
+name: Build Containers
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'src/**'
+      - '.github/workflows/build.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build and Push Containers
+    uses: stevei101/podman-kustomize-k8s-deploy-gha/.github/workflows/podman-build-reusable.yml@main
+    with:
+      backend_path: 'src/backend'
+      frontend_path: 'src/frontend'
+      backend_dockerfile: 'Dockerfile'
+      frontend_dockerfile: 'Dockerfile'
+      build_target: 'production'
+      registry_location: 'us-central1'
+      registry_name: 'app-images'
+    secrets:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+      WIF_SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+

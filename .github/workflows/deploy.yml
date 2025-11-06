@@ -1,0 +1,46 @@
+name: Deploy to Kubernetes
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'development'
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+      image_tag:
+        description: 'Image tag to deploy'
+        required: false
+        type: string
+  push:
+    branches:
+      - main
+    paths:
+      - 'k8s/**'
+      - '.github/workflows/deploy.yml'
+
+jobs:
+  deploy:
+    name: Deploy to Kubernetes
+    # Note: This uses the k8s-deploy workflow from podman-kustomize-k8s-deploy-gha
+    # You may need to adapt this based on your specific deployment needs
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Kubernetes
+        run: |
+          echo "🚀 Deploying to ${{ github.event.inputs.environment || 'development' }}"
+          echo "📦 Image tag: ${{ github.event.inputs.image_tag || github.sha }}"
+          echo ""
+          echo "💡 Customize this workflow based on your deployment needs:"
+          echo "   - Use kubectl apply -k for Kustomize"
+          echo "   - Use helm upgrade for Helm charts"
+          echo "   - Reference: https://github.com/stevei101/podman-kustomize-k8s-deploy-gha"
+

@@ -1,0 +1,29 @@
+name: Infrastructure
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'terraform/**'
+      - '.github/workflows/infrastructure.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'terraform/**'
+      - '.github/workflows/infrastructure.yml'
+  workflow_dispatch:
+
+jobs:
+  terraform:
+    name: Terraform Infrastructure
+    uses: stevei101/infrastructure/.github/workflows/terraform-agentnav-reusable.yml@main
+    secrets:
+      GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+      TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORGANIZATION }}
+      TF_WORKSPACE: ${{ secrets.TF_WORKSPACE }}
+      TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
+      WIF_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+      WIF_SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
